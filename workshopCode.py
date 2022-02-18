@@ -14,3 +14,19 @@ Output: print out the list in the format '[X, Y]' where X, Y are the two numbers
     that add to the target
 """
 #single line comment
+
+def  SolveTwoSum(nums, target):
+    for i, num1 in enumerate(nums):
+        for j in range(i+1, len(nums)):
+            if (num1 + inLine[j] == target):
+                return "[%d, %d]" % (i, j)
+    return "impossible"
+
+
+inLine = input("Type the space-separated list of numbers\n").split(" ")
+target = int(input("Type the target number\n"))
+
+for i in range(len(inLine)):
+    inLine[i] = int(inLine[i])
+
+print(SolveTwoSum(inLine, target))
